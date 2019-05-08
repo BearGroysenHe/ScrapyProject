@@ -15,3 +15,5 @@ class CnblogspiderItem(scrapy.Item):
     time = scrapy.Field()
     title = scrapy.Field()
     content = scrapy.Field()
+    cimage_urls = scrapy.Field()
+    cimages = scrapy.Field()

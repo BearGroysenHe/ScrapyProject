@@ -66,8 +66,16 @@ ROBOTSTXT_OBEY = True
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'cnblogSpider.pipelines.CnblogspiderPipeline': 300,
+   'scrapy.pipelines.images.ImagesPipeline':1,
 }
-
+IMAGES_STORE = '/home/tarena/图片'
+IMAGES_URLS_FIELD = 'cimage_urls'
+IMAGES_RESULT_FIELD = 'cimages'
+IMAGES_EXPIRES = 30
+IMAGES_THUMBS = {
+    'small': (50, 50),
+    'big': (270, 270),
+}
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
